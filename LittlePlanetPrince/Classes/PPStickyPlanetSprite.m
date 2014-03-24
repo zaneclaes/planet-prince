@@ -15,8 +15,7 @@
 }
 
 + (id)planet {
-  PPPlanetSprite *sprite = [super planet];
-  sprite.color = [CCColor redColor];
+  PPPlanetSprite *sprite = [self spriteWithImageNamed:@"planet3.png"];
   return sprite;
 }
 

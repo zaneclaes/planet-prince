@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0DFFE0DA-B609-4522-AB50-419F338276DD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LittlePlanetPrince</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>473E6AF9-0E46-451C-9059-28554845EFFA</key>
+		<string>ssh://github.com/zaneclaes/planet-prince.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LittlePlanetPrince.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>473E6AF9-0E46-451C-9059-28554845EFFA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/zaneclaes/planet-prince.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>473E6AF9-0E46-451C-9059-28554845EFFA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>473E6AF9-0E46-451C-9059-28554845EFFA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>planet-prince</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -15,8 +15,7 @@
 }
 
 + (id)planet {
-  PPPlanetSprite *sprite = [super planet];
-  sprite.color = [CCColor grayColor];
+  PPPlanetSprite *sprite = [self spriteWithImageNamed:@"planet6.png"];
   sprite.opacity = 0.5;
   return sprite;
 }

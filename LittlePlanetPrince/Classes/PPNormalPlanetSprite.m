@@ -11,10 +11,14 @@
 @implementation PPNormalPlanetSprite
 
 - (void)onPlayerJump {
-  self.opacity -= 0.25;
+  self.opacity = MAX(0, self.opacity - 0.34);
   if(self.opacity <= 0) {
     self.gaseous = YES;
   }
+}
+
++ (id)planet {
+  return [self spriteWithImageNamed:@"planet1.png"];
 }
 
 @end

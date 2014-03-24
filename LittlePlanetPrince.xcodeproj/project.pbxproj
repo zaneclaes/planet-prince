@@ -233,6 +233,31 @@
 		2FDF4FF118DA711D0053AAE3 /* PPGasPlanetSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF4FF018DA711D0053AAE3 /* PPGasPlanetSprite.m */; };
 		2FDF4FF418DA71490053AAE3 /* PPStarPlanetSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF4FF318DA71490053AAE3 /* PPStarPlanetSprite.m */; };
 		2FDF51A418DE21E30053AAE3 /* PPNormalPlanetSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDF51A318DE21E30053AAE3 /* PPNormalPlanetSprite.m */; };
+		2FDF51D718E099960053AAE3 /* bkgd-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51CB18E099960053AAE3 /* bkgd-hd.png */; };
+		2FDF51D818E099960053AAE3 /* planet1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51CC18E099960053AAE3 /* planet1-hd.png */; };
+		2FDF51D918E099960053AAE3 /* planet2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51CD18E099960053AAE3 /* planet2-hd.png */; };
+		2FDF51DA18E099960053AAE3 /* planet3-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51CE18E099960053AAE3 /* planet3-hd.png */; };
+		2FDF51DB18E099960053AAE3 /* planet4-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51CF18E099960053AAE3 /* planet4-hd.png */; };
+		2FDF51DC18E099960053AAE3 /* planet5-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51D018E099960053AAE3 /* planet5-hd.png */; };
+		2FDF51DD18E099960053AAE3 /* planet6-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51D118E099960053AAE3 /* planet6-hd.png */; };
+		2FDF51DE18E099960053AAE3 /* player1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51D218E099960053AAE3 /* player1-hd.png */; };
+		2FDF51DF18E099960053AAE3 /* player2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51D318E099960053AAE3 /* player2-hd.png */; };
+		2FDF51E018E099960053AAE3 /* player3-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51D418E099960053AAE3 /* player3-hd.png */; };
+		2FDF51E118E099960053AAE3 /* player4-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51D518E099960053AAE3 /* player4-hd.png */; };
+		2FDF51E218E099960053AAE3 /* player5-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51D618E099960053AAE3 /* player5-hd.png */; };
+		2FDF51E418E099C40053AAE3 /* planet1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51E318E099C40053AAE3 /* planet1.png */; };
+		2FDF51F118E09A310053AAE3 /* bkgd.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51E518E09A310053AAE3 /* bkgd.png */; };
+		2FDF51F218E09A310053AAE3 /* planet2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51E618E09A310053AAE3 /* planet2.png */; };
+		2FDF51F318E09A310053AAE3 /* planet3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51E718E09A310053AAE3 /* planet3.png */; };
+		2FDF51F418E09A310053AAE3 /* planet4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51E818E09A310053AAE3 /* planet4.png */; };
+		2FDF51F518E09A310053AAE3 /* planet5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51E918E09A310053AAE3 /* planet5.png */; };
+		2FDF51F618E09A310053AAE3 /* planet6.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51EA18E09A310053AAE3 /* planet6.png */; };
+		2FDF51F718E09A310053AAE3 /* player1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51EB18E09A310053AAE3 /* player1.png */; };
+		2FDF51F818E09A310053AAE3 /* player2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51EC18E09A310053AAE3 /* player2.png */; };
+		2FDF51F918E09A310053AAE3 /* player3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51ED18E09A310053AAE3 /* player3.png */; };
+		2FDF51FA18E09A310053AAE3 /* player4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51EE18E09A310053AAE3 /* player4.png */; };
+		2FDF51FB18E09A310053AAE3 /* player5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51EF18E09A310053AAE3 /* player5.png */; };
+		2FDF51FC18E09A310053AAE3 /* planet1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF51F018E09A310053AAE3 /* planet1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -708,6 +733,31 @@
 		2FDF4FF318DA71490053AAE3 /* PPStarPlanetSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPStarPlanetSprite.m; path = Classes/PPStarPlanetSprite.m; sourceTree = "<group>"; };
 		2FDF51A218DE21E30053AAE3 /* PPNormalPlanetSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPNormalPlanetSprite.h; path = Classes/PPNormalPlanetSprite.h; sourceTree = "<group>"; };
 		2FDF51A318DE21E30053AAE3 /* PPNormalPlanetSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPNormalPlanetSprite.m; path = Classes/PPNormalPlanetSprite.m; sourceTree = "<group>"; };
+		2FDF51CB18E099960053AAE3 /* bkgd-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bkgd-hd.png"; sourceTree = "<group>"; };
+		2FDF51CC18E099960053AAE3 /* planet1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "planet1-hd.png"; sourceTree = "<group>"; };
+		2FDF51CD18E099960053AAE3 /* planet2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "planet2-hd.png"; sourceTree = "<group>"; };
+		2FDF51CE18E099960053AAE3 /* planet3-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "planet3-hd.png"; sourceTree = "<group>"; };
+		2FDF51CF18E099960053AAE3 /* planet4-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "planet4-hd.png"; sourceTree = "<group>"; };
+		2FDF51D018E099960053AAE3 /* planet5-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "planet5-hd.png"; sourceTree = "<group>"; };
+		2FDF51D118E099960053AAE3 /* planet6-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "planet6-hd.png"; sourceTree = "<group>"; };
+		2FDF51D218E099960053AAE3 /* player1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player1-hd.png"; sourceTree = "<group>"; };
+		2FDF51D318E099960053AAE3 /* player2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player2-hd.png"; sourceTree = "<group>"; };
+		2FDF51D418E099960053AAE3 /* player3-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player3-hd.png"; sourceTree = "<group>"; };
+		2FDF51D518E099960053AAE3 /* player4-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player4-hd.png"; sourceTree = "<group>"; };
+		2FDF51D618E099960053AAE3 /* player5-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player5-hd.png"; sourceTree = "<group>"; };
+		2FDF51E318E099C40053AAE3 /* planet1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet1.png; sourceTree = "<group>"; };
+		2FDF51E518E09A310053AAE3 /* bkgd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bkgd.png; sourceTree = "<group>"; };
+		2FDF51E618E09A310053AAE3 /* planet2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet2.png; sourceTree = "<group>"; };
+		2FDF51E718E09A310053AAE3 /* planet3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet3.png; sourceTree = "<group>"; };
+		2FDF51E818E09A310053AAE3 /* planet4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet4.png; sourceTree = "<group>"; };
+		2FDF51E918E09A310053AAE3 /* planet5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet5.png; sourceTree = "<group>"; };
+		2FDF51EA18E09A310053AAE3 /* planet6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet6.png; sourceTree = "<group>"; };
+		2FDF51EB18E09A310053AAE3 /* player1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player1.png; sourceTree = "<group>"; };
+		2FDF51EC18E09A310053AAE3 /* player2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player2.png; sourceTree = "<group>"; };
+		2FDF51ED18E09A310053AAE3 /* player3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player3.png; sourceTree = "<group>"; };
+		2FDF51EE18E09A310053AAE3 /* player4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player4.png; sourceTree = "<group>"; };
+		2FDF51EF18E09A310053AAE3 /* player5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player5.png; sourceTree = "<group>"; };
+		2FDF51F018E09A310053AAE3 /* planet1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -809,6 +859,7 @@
 		2F8E9D8A18C814D1009EE582 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2FDF51B218E0992B0053AAE3 /* images */,
 				2FDF4CEE18D129D80053AAE3 /* planet.png */,
 				2F8E9D8B18C814D1009EE582 /* Default.png */,
 				2F8E9D8D18C814D1009EE582 /* Default@2x.png */,
@@ -1663,6 +1714,39 @@
 			name = Planets;
 			sourceTree = "<group>";
 		};
+		2FDF51B218E0992B0053AAE3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2FDF51E518E09A310053AAE3 /* bkgd.png */,
+				2FDF51E618E09A310053AAE3 /* planet2.png */,
+				2FDF51E718E09A310053AAE3 /* planet3.png */,
+				2FDF51E818E09A310053AAE3 /* planet4.png */,
+				2FDF51E918E09A310053AAE3 /* planet5.png */,
+				2FDF51EA18E09A310053AAE3 /* planet6.png */,
+				2FDF51EB18E09A310053AAE3 /* player1.png */,
+				2FDF51EC18E09A310053AAE3 /* player2.png */,
+				2FDF51ED18E09A310053AAE3 /* player3.png */,
+				2FDF51EE18E09A310053AAE3 /* player4.png */,
+				2FDF51EF18E09A310053AAE3 /* player5.png */,
+				2FDF51F018E09A310053AAE3 /* planet1.png */,
+				2FDF51E318E099C40053AAE3 /* planet1.png */,
+				2FDF51CB18E099960053AAE3 /* bkgd-hd.png */,
+				2FDF51CC18E099960053AAE3 /* planet1-hd.png */,
+				2FDF51CD18E099960053AAE3 /* planet2-hd.png */,
+				2FDF51CE18E099960053AAE3 /* planet3-hd.png */,
+				2FDF51CF18E099960053AAE3 /* planet4-hd.png */,
+				2FDF51D018E099960053AAE3 /* planet5-hd.png */,
+				2FDF51D118E099960053AAE3 /* planet6-hd.png */,
+				2FDF51D218E099960053AAE3 /* player1-hd.png */,
+				2FDF51D318E099960053AAE3 /* player2-hd.png */,
+				2FDF51D418E099960053AAE3 /* player3-hd.png */,
+				2FDF51D518E099960053AAE3 /* player4-hd.png */,
+				2FDF51D618E099960053AAE3 /* player5-hd.png */,
+			);
+			name = images;
+			path = Resources/images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1733,37 +1817,62 @@
 			files = (
 				2F8E9D8E18C814D1009EE582 /* Default@2x.png in Resources */,
 				2F8E9DA118C814D1009EE582 /* Icon-120.png in Resources */,
+				2FDF51E018E099960053AAE3 /* player3-hd.png in Resources */,
+				2FDF51DC18E099960053AAE3 /* planet5-hd.png in Resources */,
 				2F8E9FA518C814D3009EE582 /* LICENSE_CCBReader.txt in Resources */,
+				2FDF51DD18E099960053AAE3 /* planet6-hd.png in Resources */,
 				2F8EA03818C814D4009EE582 /* newton-ipad.plist in Resources */,
+				2FDF51E118E099960053AAE3 /* player4-hd.png in Resources */,
 				2F8EA03418C814D4009EE582 /* newton-ipadhd.plist in Resources */,
 				2F8E9D9718C814D1009EE582 /* Icon@2x.png in Resources */,
 				2F8E9DA918C814D1009EE582 /* Icon-Small@2x.png in Resources */,
 				2F8EA03C18C814D4009EE582 /* newton.plist in Resources */,
+				2FDF51F618E09A310053AAE3 /* planet6.png in Resources */,
+				2FDF51F118E09A310053AAE3 /* bkgd.png in Resources */,
 				2F8E9D9B18C814D1009EE582 /* Icon-72@2x.png in Resources */,
 				2F8E9D8C18C814D1009EE582 /* Default.png in Resources */,
 				2F8E9D9518C814D1009EE582 /* Icon.png in Resources */,
+				2FDF51E418E099C40053AAE3 /* planet1.png in Resources */,
 				2F8E9DA318C814D1009EE582 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				2F8E9D9218C814D1009EE582 /* Default-Landscape~ipad.png in Resources */,
 				2F8E9DA718C814D1009EE582 /* Icon-Small.png in Resources */,
+				2FDF51F218E09A310053AAE3 /* planet2.png in Resources */,
 				2F8E9DA518C814D1009EE582 /* Icon-Small-50.png in Resources */,
 				2F8EA03018C814D4009EE582 /* fire.plist in Resources */,
 				2F8EA03218C814D4009EE582 /* fire.png in Resources */,
+				2FDF51DF18E099960053AAE3 /* player2-hd.png in Resources */,
+				2FDF51E218E099960053AAE3 /* player5-hd.png in Resources */,
+				2FDF51F818E09A310053AAE3 /* player2.png in Resources */,
 				2F8EA03A18C814D4009EE582 /* newton-ipad.png in Resources */,
 				2F8E9F8E18C814D3009EE582 /* LICENSE_Kazmath.txt in Resources */,
+				2FDF51F418E09A310053AAE3 /* planet4.png in Resources */,
+				2FDF51D818E099960053AAE3 /* planet1-hd.png in Resources */,
 				2F8E9D9918C814D1009EE582 /* Icon-72.png in Resources */,
+				2FDF51DE18E099960053AAE3 /* player1-hd.png in Resources */,
 				2F8E9EE718C814D3009EE582 /* LICENSE_cocos2d.txt in Resources */,
 				2F8EA03618C814D4009EE582 /* newton-ipadhd.png in Resources */,
+				2FDF51FB18E09A310053AAE3 /* player5.png in Resources */,
 				2F8E9D9018C814D1009EE582 /* Default-568h@2x.png in Resources */,
 				2F8E9DB018C814D1009EE582 /* iTunesArtwork in Resources */,
 				2FDF4CEF18D129D80053AAE3 /* planet.png in Resources */,
 				2F8EA03E18C814D4009EE582 /* newton.png in Resources */,
 				2F8E9DAB18C814D1009EE582 /* Icon-Spotlight-iOS7.png in Resources */,
 				2F8E9D9F18C814D1009EE582 /* Icon-76@2x.png in Resources */,
+				2FDF51F318E09A310053AAE3 /* planet3.png in Resources */,
 				2F8EA01318C814D3009EE582 /* LICENSE_Chipmunk.txt in Resources */,
 				2F8E9DAD18C814D1009EE582 /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				2F8E9D9D18C814D1009EE582 /* Icon-76.png in Resources */,
+				2FDF51F918E09A310053AAE3 /* player3.png in Resources */,
+				2FDF51F518E09A310053AAE3 /* planet5.png in Resources */,
+				2FDF51DB18E099960053AAE3 /* planet4-hd.png in Resources */,
+				2FDF51F718E09A310053AAE3 /* player1.png in Resources */,
+				2FDF51FC18E09A310053AAE3 /* planet1.png in Resources */,
+				2FDF51D918E099960053AAE3 /* planet2-hd.png in Resources */,
+				2FDF51DA18E099960053AAE3 /* planet3-hd.png in Resources */,
 				2F8E9F7318C814D3009EE582 /* ChangeLog in Resources */,
 				2F8E9DB218C814D1009EE582 /* iTunesArtwork@2x in Resources */,
+				2FDF51D718E099960053AAE3 /* bkgd-hd.png in Resources */,
+				2FDF51FA18E09A310053AAE3 /* player4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

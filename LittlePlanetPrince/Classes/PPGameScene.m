@@ -189,18 +189,20 @@ static CGFloat const kPlanetSpacing = 180;
   self.userInteractionEnabled = YES;
 
   // Create a colored background (Dark Grey)
-  CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f]];
+  CCNodeColor *background = [CCSprite spriteWithImageNamed:@"bkgd.png"];
+  background.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
   [self addChild:background];
 
   // Add a sprite
-  _playerSprite = [PPPlayerSprite spriteWithImageNamed:@"Icon-72.png"];
+  _playerSprite = [PPPlayerSprite spriteWithImageNamed:@"player1.png"];
   _playerSprite.anchorPoint = ccp(0.5, 0);
-  _playerSprite.position  = ccp(self.contentSize.width/2,0);
+  _playerSprite.position  = ccp(self.contentSize.width/2,40);
   _playerSprite.velocity = ccp(0,kJumpVelocity);
   [self addChild:_playerSprite];
 
   // Add some starting planets
   _planets = [NSMutableArray new];
+  [self createPlanetAt:ccp(_playerSprite.position.x, _playerSprite.position.y - 70) ofType:@"PPNormalPlanetSprite"];
   for(NSInteger x=0; x<10; x++) {
     [self spawnPlanets];
   }

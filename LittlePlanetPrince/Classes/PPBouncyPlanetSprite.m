@@ -15,8 +15,7 @@
 }
 
 + (id)planet {
-  PPBouncyPlanetSprite *sprite = [super planet];
-  sprite.color = [CCColor greenColor];
+  PPBouncyPlanetSprite *sprite = [self spriteWithImageNamed:@"planet4.png"];
   return sprite;
 }
 
