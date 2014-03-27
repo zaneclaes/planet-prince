@@ -8,8 +8,11 @@
 
 #import "CCSprite.h"
 
+@class PPPowerUpSprite;
+
 @interface PPPlanetSprite : CCSprite
 
+@property (nonatomic, readonly) PPPowerUpSprite *powerup;
 @property (nonatomic, readonly) BOOL killPlayer;
 @property (nonatomic, readwrite) BOOL gaseous;
 @property (nonatomic, readonly) CGFloat jumpMultiplier;

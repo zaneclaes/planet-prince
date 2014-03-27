@@ -7,8 +7,13 @@
 //
 
 #import "PPGasPlanetSprite.h"
+#import "PPGaseousPowerUpSprite.h"
 
 @implementation PPGasPlanetSprite
+
+- (PPPowerUpSprite*)powerup {
+  return [PPGaseousPowerUpSprite powerup];
+}
 
 - (BOOL)gaseous {
   return YES;

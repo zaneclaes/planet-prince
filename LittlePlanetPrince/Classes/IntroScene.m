@@ -35,30 +35,24 @@
     self = [super init];
     if (!self) return(nil);
     
-    // Create a colored background (Dark Grey)
-    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f]];
-    [self addChild:background];
-    
+  // Create a colored background (Dark Grey)
+  CCNodeColor *background = [CCSprite spriteWithImageNamed:@"bkgd.png"];
+  background.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
+  [self addChild:background];
+
     // Hello world
-    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Chalkduster" fontSize:36.0f];
+    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Planet Prince" fontName:@"Chalkduster" fontSize:36.0f];
     label.positionType = CCPositionTypeNormalized;
-    label.color = [CCColor redColor];
+    label.color = [CCColor yellowColor];
     label.position = ccp(0.5f, 0.5f); // Middle of screen
     [self addChild:label];
     
     // Spinning scene button
-    CCButton *spinningButton = [CCButton buttonWithTitle:@"[ Play Game ]" fontName:@"Verdana-Bold" fontSize:18.0f];
+    CCButton *spinningButton = [CCButton buttonWithTitle:@"[ Play Game ]" fontName:@"Chalkduster" fontSize:18.0f];
     spinningButton.positionType = CCPositionTypeNormalized;
     spinningButton.position = ccp(0.5f, 0.35f);
     [spinningButton setTarget:self selector:@selector(onPlayGameClicked:)];
     [self addChild:spinningButton];
-
-    // Next scene button
-    CCButton *newtonButton = [CCButton buttonWithTitle:@"[ Newton Physics ]" fontName:@"Verdana-Bold" fontSize:18.0f];
-    newtonButton.positionType = CCPositionTypeNormalized;
-    newtonButton.position = ccp(0.5f, 0.20f);
-    [newtonButton setTarget:self selector:@selector(onNewtonClicked:)];
-    [self addChild:newtonButton];
 	
     // done
 	return self;

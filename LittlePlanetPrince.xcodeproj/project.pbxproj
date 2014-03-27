@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F4F370518E3AE36002330FD /* PPPowerUpSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4F370418E3AE36002330FD /* PPPowerUpSprite.m */; };
+		2F4F370B18E3AE6C002330FD /* PPSpaceshipPowerUpSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4F370A18E3AE6C002330FD /* PPSpaceshipPowerUpSprite.m */; };
+		2F4F370E18E3B350002330FD /* PPGaseousPowerUpSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4F370D18E3B350002330FD /* PPGaseousPowerUpSprite.m */; };
 		2F54D26C18D105760098B1F8 /* PPGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F54D26B18D105760098B1F8 /* PPGameScene.m */; };
 		2F54D27018D1081D0098B1F8 /* PPPlayerSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F54D26F18D1081D0098B1F8 /* PPPlayerSprite.m */; };
 		2F8E9D7218C814D1009EE582 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8E9D7118C814D1009EE582 /* QuartzCore.framework */; };
@@ -271,6 +274,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F4F370318E3AE36002330FD /* PPPowerUpSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPPowerUpSprite.h; path = Classes/PPPowerUpSprite.h; sourceTree = "<group>"; };
+		2F4F370418E3AE36002330FD /* PPPowerUpSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPPowerUpSprite.m; path = Classes/PPPowerUpSprite.m; sourceTree = "<group>"; };
+		2F4F370918E3AE6C002330FD /* PPSpaceshipPowerUpSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPSpaceshipPowerUpSprite.h; path = Classes/PPSpaceshipPowerUpSprite.h; sourceTree = "<group>"; };
+		2F4F370A18E3AE6C002330FD /* PPSpaceshipPowerUpSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPSpaceshipPowerUpSprite.m; path = Classes/PPSpaceshipPowerUpSprite.m; sourceTree = "<group>"; };
+		2F4F370C18E3B350002330FD /* PPGaseousPowerUpSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGaseousPowerUpSprite.h; path = Classes/PPGaseousPowerUpSprite.h; sourceTree = "<group>"; };
+		2F4F370D18E3B350002330FD /* PPGaseousPowerUpSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPGaseousPowerUpSprite.m; path = Classes/PPGaseousPowerUpSprite.m; sourceTree = "<group>"; };
 		2F54D26A18D105760098B1F8 /* PPGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGameScene.h; path = Classes/PPGameScene.h; sourceTree = "<group>"; };
 		2F54D26B18D105760098B1F8 /* PPGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPGameScene.m; path = Classes/PPGameScene.m; sourceTree = "<group>"; };
 		2F54D26E18D1081D0098B1F8 /* PPPlayerSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPPlayerSprite.h; path = Classes/PPPlayerSprite.h; sourceTree = "<group>"; };
@@ -781,9 +790,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4F370218E3AE23002330FD /* PowerUps */ = {
+			isa = PBXGroup;
+			children = (
+				2F4F370318E3AE36002330FD /* PPPowerUpSprite.h */,
+				2F4F370418E3AE36002330FD /* PPPowerUpSprite.m */,
+				2F4F370918E3AE6C002330FD /* PPSpaceshipPowerUpSprite.h */,
+				2F4F370A18E3AE6C002330FD /* PPSpaceshipPowerUpSprite.m */,
+				2F4F370C18E3B350002330FD /* PPGaseousPowerUpSprite.h */,
+				2F4F370D18E3B350002330FD /* PPGaseousPowerUpSprite.m */,
+			);
+			name = PowerUps;
+			sourceTree = "<group>";
+		};
 		2F54D26918D105610098B1F8 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				2F4F370218E3AE23002330FD /* PowerUps */,
 				2FDF4FE518DA5F1C0053AAE3 /* Planets */,
 				2F54D26A18D105760098B1F8 /* PPGameScene.h */,
 				2F54D26B18D105760098B1F8 /* PPGameScene.m */,
@@ -1963,6 +1986,7 @@
 				2F8E9E8D18C814D2009EE582 /* CCTiledMapObjectGroup.m in Sources */,
 				2F8EA02818C814D3009EE582 /* NewtonSphere.m in Sources */,
 				2F8E9F8A18C814D3009EE582 /* vec3.c in Sources */,
+				2F4F370518E3AE36002330FD /* PPPowerUpSprite.m in Sources */,
 				2FDF4CED18D1241F0053AAE3 /* PPPlanetSprite.m in Sources */,
 				2F8E9E0D18C814D2009EE582 /* CCLayoutBox.m in Sources */,
 				2F8E9E0A18C814D2009EE582 /* CCLayout.m in Sources */,
@@ -2015,6 +2039,7 @@
 				2F8EA01B18C814D3009EE582 /* AppDelegate.m in Sources */,
 				2F8E9DEB18C814D2009EE582 /* CCDrawingPrimitives.m in Sources */,
 				2F8E9EDC18C814D2009EE582 /* TGAlib.m in Sources */,
+				2F4F370E18E3B350002330FD /* PPGaseousPowerUpSprite.m in Sources */,
 				2F8E9EA818C814D2009EE582 /* UITouch+CC.m in Sources */,
 				2F8E9F8618C814D3009EE582 /* utility.c in Sources */,
 				2F8E9EE518C814D3009EE582 /* ZipUtils.m in Sources */,
@@ -2032,6 +2057,7 @@
 				2F8E9F0C18C814D3009EE582 /* ALCaptureDevice.m in Sources */,
 				2F8E9E4818C814D2009EE582 /* CCResponderManager.m in Sources */,
 				2F8E9DE018C814D2009EE582 /* CCConfiguration.m in Sources */,
+				2F4F370B18E3AE6C002330FD /* PPSpaceshipPowerUpSprite.m in Sources */,
 				2F8E9F2318C814D3009EE582 /* ALWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

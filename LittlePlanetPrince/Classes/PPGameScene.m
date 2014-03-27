@@ -11,17 +11,21 @@
 #import "NewtonScene.h"
 #import "PPPlayerSprite.h"
 #import "PPPlanetSprite.h"
+#import "PPPowerUpSprite.h"
 
 static CGFloat const kJumpVelocity  = 400;
 static CGFloat const kGravity       = 350;
-static CGSize const kPlatformSize   = {120,20};
-static CGFloat const kPlatformPadding = 20;
-static CGFloat const kPlanetSpacing = 180;
+static CGSize const kPlatformSize   = {50,10};
+static CGFloat const kPlatformPadding = 10;
+static CGFloat const kPlanetMaxSpacing = 186;
+static CGFloat const kPlanetSpacingStart = 8000;
+static CGFloat const kAdditionalPlanetDivisor = 2000;
 
 @implementation PPGameScene
 {
   PPPlayerSprite *_playerSprite;
   NSMutableArray *_planets;
+  NSMutableArray *_powerups;
   CGFloat _lastPlanetY;
   CCButton *_heightButton;
 }
@@ -53,16 +57,25 @@ static CGFloat const kPlanetSpacing = 180;
 
   // Move all world objects down...
   NSArray *objects = [_planets arrayByAddingObject:_playerSprite];
+  objects = [objects arrayByAddingObjectsFromArray:_powerups];
   for(CCSprite *sprite in objects) {
     sprite.position = ccp(sprite.position.x, sprite.position.y - amount);
   }
 
   // Check for off-scren planets...
   for(NSInteger x=0; x<_planets.count; x++) {
-    PPPlanetSprite *planet = _planets[x];
+    CCSprite *planet = _planets[x];
     if((planet.position.y + planet.contentSize.height) < 0) {
       [planet removeFromParent];
       [_planets removeObjectAtIndex:x];
+      x--;
+    }
+  }
+  for(NSInteger x=0; x<_powerups.count; x++) {
+    CCSprite *planet = _powerups[x];
+    if((planet.position.y + planet.contentSize.height) < 0) {
+      [planet removeFromParent];
+      [_powerups removeObjectAtIndex:x];
       x--;
     }
   }
@@ -83,6 +96,30 @@ static CGFloat const kPlanetSpacing = 180;
   }
   _playerSprite.velocity = ccp(_playerSprite.velocity.x, _playerSprite.velocity.y - kGravity * dt);
   _playerSprite.position = ccp(xPos, _playerSprite.position.y + _playerSprite.velocity.y * dt);
+
+  // Check for killing a player
+  for(PPPlanetSprite *planet in _planets) {
+    if(CGRectIntersectsRect(_playerSprite.boundingBox, planet.boundingBox)) {
+      if(planet.killPlayer) {
+        [self onGameOver];
+        return;
+      }
+
+      if(planet.powerup) {
+        [_playerSprite gainPowerup:planet.powerup];
+      }
+    }
+  }
+
+  // Check for a power up
+  for(NSInteger x=0; x<_powerups.count; x++) {
+    PPPowerUpSprite *powerup = _powerups[x];
+    if(CGRectIntersectsRect(_playerSprite.boundingBox, powerup.boundingBox)) {
+      [_playerSprite gainPowerup:powerup];
+      [powerup removeFromParent];
+      [_powerups removeObjectAtIndex:x];
+    }
+  }
 
   // Check for collision with a planet...
   if(_playerSprite.velocity.y < 0) {
@@ -130,10 +167,19 @@ static CGFloat const kPlanetSpacing = 180;
   return planet;
 }
 
+- (PPPowerUpSprite*)createPowerUpAt:(CGPoint)pos ofType:(NSString*)key {
+  PPPowerUpSprite *planet = [NSClassFromString(key) powerup];
+  planet.anchorPoint = ccp(0.5, 0);
+  planet.position = pos;
+  [_powerups addObject:planet];
+  [self addChild:planet];
+  return planet;
+}
+
 - (PPPlanetSprite*)createPlanetAt:(CGPoint)pos {
-  NSDictionary *map = @{@"PPBouncyPlanetSprite":@{@"chance":@(20),@"minHeight":@(200)},
+  NSDictionary *map = @{@"PPBouncyPlanetSprite":@{@"chance":@(10),@"minHeight":@(200)},
                         @"PPStickyPlanetSprite":@{@"chance":@(30),@"minHeight":@(500)},
-                        @"PPGasPlanetSprite":@{@"chance":@(70),@"minHeight":@(1000)},
+                        @"PPGasPlanetSprite":@{@"chance":@(90),@"minHeight":@(1000)},
                         @"PPStarPlanetSprite":@{@"chance":@(30),@"minHeight":@(1000)}};
 
   NSInteger idx = arc4random_uniform(map.allKeys.count);
@@ -149,7 +195,10 @@ static CGFloat const kPlanetSpacing = 180;
 
 // Creates a planet that does not intersect with others
 - (void)spawnPlanets {
-  CGPoint pos = CGPointMake(0, _lastPlanetY + kPlanetSpacing);
+  CGFloat mult = MIN( self.height / kPlanetSpacingStart, 1);
+  CGFloat planetSpacing = MAX( kPlanetMaxSpacing * mult, 50 );
+  CGPoint pos = CGPointMake(0, _lastPlanetY + planetSpacing);
+  //  NSLog(@"Create planet at %.02f",pos.y);
 
   if(pos.y > self.contentSize.height) {
     // The target Y is above the top of the screen; don't need a new planet, just yet.
@@ -169,14 +218,20 @@ static CGFloat const kPlanetSpacing = 180;
         break;
       }
     }
-    if(tries > 40) {
+    if(tries > 400) {
+      NSLog(@"FAILED TO CREATE PLANET at %.02f",pos.y);
       return;
     }
   } while(intersects);
   [self createPlanetAt:pos ofType:@"PPNormalPlanetSprite"];
   _lastPlanetY = pos.y;
-  pos.y += kPlatformSize.height + kPlatformPadding + arc4random_uniform(kPlanetSpacing/4 * 3);
-  [self createPlanetAt:pos];
+
+  NSInteger additionalPlanets = self.height / kAdditionalPlanetDivisor + 1;
+  for(NSInteger x=0; x<additionalPlanets; x++) {
+    pos.x = arc4random_uniform(self.contentSize.width - kPlatformSize.width) + kPlatformSize.width/2;
+    pos.y += kPlatformSize.height + kPlatformPadding + arc4random_uniform(planetSpacing/4 * 3);
+    [self createPlanetAt:pos];
+  }
 }
 
 - (id)init
@@ -201,9 +256,12 @@ static CGFloat const kPlanetSpacing = 180;
   [self addChild:_playerSprite];
 
   // Add some starting planets
+  _powerups = [NSMutableArray new];
   _planets = [NSMutableArray new];
-  [self createPlanetAt:ccp(_playerSprite.position.x, _playerSprite.position.y - 70) ofType:@"PPNormalPlanetSprite"];
-  for(NSInteger x=0; x<10; x++) {
+  [self createPowerUpAt:ccp(_playerSprite.position.x + arc4random_uniform(100) - 50,
+                            _playerSprite.position.y + arc4random_uniform(100)) ofType:@"PPSpaceshipPowerUpSprite"];
+  [self createPlanetAt:ccp(_playerSprite.position.x, _playerSprite.position.y - 40) ofType:@"PPNormalPlanetSprite"];
+  for(NSInteger x=0; x<20; x++) {
     [self spawnPlanets];
   }
 

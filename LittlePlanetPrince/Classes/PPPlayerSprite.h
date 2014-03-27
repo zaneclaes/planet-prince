@@ -8,7 +8,11 @@
 
 #import "CCSprite.h"
 
+@class PPPowerUpSprite;
+
 @interface PPPlayerSprite : CCSprite
 @property (nonatomic, readwrite) CGPoint velocity;
+
+- (void)gainPowerup:(PPPowerUpSprite*)powerup;
 
 @end
